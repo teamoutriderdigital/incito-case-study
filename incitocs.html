@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>
+      Incito SEO Case Study — 30% Organic Lift in 5 Months | Outrider Digital
+    </title>
+    <meta
+      name="description"
+      content="Outrider Digital’s audit‑first SEO helped Incito lift organic traffic
+      by 30% in five months. See goals, approach, results, and GA4 proof."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #0b1324;
+        --muted: #606a7a;
+        --line: #e7ecf3;
+        --accent: #0ea5a4; /* teal */
+        --accent-2: #f59e0b; /* amber */
+        --good: #10b981;
+        --alert: #ef4444;
+        --bg-soft: #f7fafc;
+        --card: #ffffff;
+        --radius: 14px;
+        --shadow: 0 10px 30px rgba(11, 19, 36, 0.08);
+        --max: 1140px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+        color: var(--ink);
+        background: #ffffff;
+      }
+
+      .container {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* HERO */
+      .hero {
+        position: relative;
+        min-height: 90vh;
+        overflow: hidden;
+      }
+      .hero img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .hero .wrap {
+        position: relative;
+        padding-top: clamp(220px, 55vh, 600px);
+        padding-bottom: 24px;
+        width: 100%;
+        text-align: center;
+        text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+      }
+      .hero h1 {
+        font-weight: 900;
+        letter-spacing: 0.2px;
+        line-height: 1.05;
+        font-size: clamp(28px, 5vw, 54px);
+        margin: 0;
+        color: #fff;
+      }
+
+      /* Subheadline on dark background (under hero) */
+      .post-intro {
+        background: #0b1324;
+        color: #fff;
+        padding: 18px 0 22px;
+      }
+      .post-intro p.subline {
+        margin: 0;
+        text-align: center;
+        font-weight: 700;
+        font-size: clamp(13px, 1.6vw, 17px);
+      }
+
+      /* NEW white intro section (separate from dark subheadline) */
+      .white-intro {
+        background: #fff;
+        border-top: 1px solid var(--line);
+        padding: 18px 0 26px;
+      }
+      .white-intro p.story {
+        margin: 0;
+        text-align: center;
+        color: var(--ink);
+        font-weight: 500;
+        font-size: clamp(14px, 1.7vw, 18px);
+        max-width: 980px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* KPI stripe */
+      .intro {
+        border-top: 1px solid var(--line);
+        background: #fff;
+      }
+      .intro .eyebrow {
+        text-align: center;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        color: var(--muted);
+        padding: 18px 0 8px;
+        font-size: 12px;
+      }
+      .kpis {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 16px;
+        padding-bottom: 26px;
+      }
+      .kpi {
+        grid-column: span 12;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-left: 6px solid var(--accent);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 16px 18px;
+        text-align: center;
+      }
+      .kpi.alt {
+        border-left-color: var(--accent-2);
+      }
+      .kpi .big {
+        font-size: 28px;
+        font-weight: 900;
+        color: var(--ink);
+      }
+      .kpi .label {
+        color: var(--muted);
+        font-weight: 600;
+        font-size: 14px;
+      }
+      @media (min-width: 900px) {
+        .kpi {
+          grid-column: span 6;
+        }
+      }
+
+      section {
+        padding: 48px 0;
+      }
+      h2 {
+        font-size: 26px;
+        margin: 0 0 10px;
+      }
+      p.lead {
+        color: var(--muted);
+        max-width: 900px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+      .inner {
+        padding: 20px 20px;
+      }
+
+      .flag {
+        display: inline-block;
+        font-weight: 800;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+
+      /* Before / After side-by-side */
+      .ba-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 16px;
+      }
+      .panel {
+        border-radius: 12px;
+        padding: 14px 14px 8px;
+        border: 1px solid var(--line);
+        background: var(--bg-soft);
+        grid-column: span 12;
+      }
+      .panel.danger {
+        border-left: 6px solid var(--alert);
+        background: #fff7f7;
+      }
+      .panel.success {
+        border-left: 6px solid var(--good);
+        background: #f1fdf6;
+      }
+      @media (min-width: 900px) {
+        .panel {
+          grid-column: span 6;
+        }
+      }
+      .panel h4 {
+        margin: 0 0 8px;
+        font-size: 14px;
+        font-weight: 800;
+      }
+      .panel ul {
+        margin: 0 0 8px 16px;
+        padding: 0;
+      }
+      .panel li {
+        margin: 6px 0;
+      }
+
+      .steps h3 {
+        margin: 0 0 6px;
+        font-size: 18px;
+      }
+      .steps p {
+        margin: 0 0 12px;
+        color: var(--muted);
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 16px;
+      }
+      .stat {
+        grid-column: span 12;
+        text-align: center;
+        border: 1px solid var(--line);
+        background: #f7fffe;
+        border-radius: var(--radius);
+        padding: 16px 18px;
+      }
+      .stat .num {
+        font-size: 30px;
+        font-weight: 900;
+        color: var(--accent);
+      }
+      .stat .cap {
+        color: var(--muted);
+        font-weight: 600;
+        font-size: 14px;
+      }
+      @media (min-width: 900px) {
+        .stat {
+          grid-column: span 3;
+        }
+      }
+
+      .proof img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+      .caption {
+        text-align: center;
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 8px;
+      }
+
+      .takeaway {
+        border-left: 8px solid var(--accent-2);
+        background: #fff8e7;
+      }
+      .takeaway p {
+        margin: 8px 0 0;
+        color: #7a5a00;
+      }
+      .cta {
+        display: inline-block;
+        margin-top: 12px;
+        background: var(--ink);
+        color: #fff;
+        padding: 12px 18px;
+        border-radius: 999px;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      footer {
+        padding: 32px 0 48px;
+        color: var(--muted);
+        text-align: center;
+        border-top: 1px solid var(--line);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HERO -->
+    <section class="hero">
+      <img
+        src="https://i.imgur.com/kEKXKqJ.png"
+        alt="Outrider Digital SEO Case Study — Hero"
+      />
+      <div class="wrap container">
+        <h1>
+          Incito’s Organic Traffic
+          <br />
+          Jumps 30% in 5 Months
+          <br />
+          (Key Events +200%)
+        </h1>
+      </div>
+    </section>
+
+    <!-- Subheadline on dark -->
+    <section class="post-intro">
+      <div class="container">
+        <p class="subline">
+          Audit‑first SEO focused on content depth, trust signals, and
+          performance—driving qualified organic growth for Incito.
+        </p>
+      </div>
+    </section>
+
+    <!-- White intro (separated) -->
+    <section class="white-intro">
+      <div class="container">
+        <p class="story">
+          By tackling thin, outdated pages, educating executive buyers, and
+          competing with industry giants, Outrider Digital helped Incito
+          transform its organic presence with an audit‑first SEO strategy. In
+          just five months, Incito saw measurable gains—+30% organic sessions
+          and +200% growth in key events.
+        </p>
+      </div>
+    </section>
+
+    <!-- KPI STRIPE -->
+    <section class="intro">
+      <div class="container">
+        <div class="eyebrow">
+          How Outrider Digital Helped Incito Strengthen Organic Growth
+        </div>
+        <div class="kpis">
+          <div class="kpi">
+            <div class="big">+30% Organic Sessions</div>
+            <div class="label">5‑month lift from GA4 (USA, Organic)</div>
+          </div>
+          <div class="kpi alt">
+            <div class="big">+200% Key Events</div>
+            <div class="label">Lead‑oriented actions from Organic grew fast</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT -->
+    <section>
+      <div class="container">
+        <h2>The Client</h2>
+        <div class="card inner">
+          <div class="flag">Incito Consulting Group</div>
+          <p class="lead">
+            Incito is an award‑winning Lean professional services and business
+            advisory firm rooted in the Toyota Production System. They guide
+            enterprises across the United States through Lean transformations—
+            True North alignment, enterprise value stream mapping, Lean daily
+            management, and continuous improvement. SEO’s job: generate
+            qualified inbound leads.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEFORE / AFTER — side-by-side -->
+    <section style="padding-top: 0">
+      <div class="container ba-grid">
+        <div class="panel danger">
+          <h4>Before Outrider Digital</h4>
+          <ul>
+            <li>Thin and outdated content on key pages</li>
+            <li>Limited bottom‑of‑funnel coverage</li>
+            <li>Underused EEAT and proof points</li>
+            <li>WordPress speed opportunities</li>
+          </ul>
+        </div>
+        <div class="panel success">
+          <h4>After Outrider Digital</h4>
+          <ul>
+            <li>16 high‑value pages refreshed and deepened</li>
+            <li>Clearer positioning, CTAs, and internal linking</li>
+            <li>Trust signals and proof integrated site‑wide</li>
+            <li>Speed improvements implemented by Incito</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHALLENGE -->
+    <section style="padding-top: 8px">
+      <div class="container">
+        <h2>The Challenge</h2>
+        <div class="card inner">
+          <p class="lead">
+            Compete for enterprise consulting demand without a heavy migration
+            or months of net‑new content. Incito needed a faster path to value:
+            upgrade what existed, showcase authority, and improve performance—so
+            more executives could find, trust, and contact the team.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section>
+      <div class="container">
+        <h2>Outrider’s Approach</h2>
+		<p>Outrider Digital created an audit‑first SEO strategy tailored specifically for Incito’s needs. The focus wasn’t just on improving rankings, 
+		but on strengthening authority, refining key pages, and building a long‑term foundation for organic growth and lead generation.</p>
+        <div class="card inner steps">
+          <h3>1) Audit and prioritization</h3>
+          <p>
+We started with a comprehensive site and speed audit to uncover technical gaps and content weaknesses. Each existing page was mapped to search intent and business value, allowing us to rank opportunities by potential impact. This produced a clear, prioritized roadmap that gave stakeholders confidence in the strategy and ensured fast implementation.          </p>
+
+          <h3>2) Refresh what matters (16 pages)</h3>
+          <p>
+Instead of spreading efforts too thin, we concentrated on 16 high‑value pages: service pages and key blog posts. Thin content was expanded with decision‑maker language, concrete outcomes, and supporting FAQs, while CTAs were made more prominent. Internal linking was also improved, creating logical pathways that guided visitors from education into lead‑driving pages.
+          </p>
+
+          <h3>3) EEAT and presentation</h3>
+          <p>
+To build trust with both users and search engines, we enhanced Incito’s Expertise, Authoritativeness, and Trustworthiness (EEAT). We surfaced their awards, credentials, and proof points directly on service pages, added reviewed/updated dates for freshness, and improved navigation through clearly defined About and Contact sections.          </p>
+
+          <h3>4) Speed improvements (client‑implemented)</h3>
+          <p>
+            Image compression/next‑gen formats, caching/CDN, and leaner
+            plugin/theme setup to reduce bloat on WordPress.
+          </p>
+
+          <h3>5) Measure and iterate</h3>
+          <p>
+            Tracked impact in GA4 and doubled‑down on pages and templates that
+            moved key events.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section style="background: var(--bg-soft)">
+      <div class="container">
+        <h2>The Results: From Baseline to Strong Growth in 5 Months</h2>
+        <p class="mini">
+          Source: GA4, Traffic Acquisition (Default Channel Group = Organic
+          Search). All values reflect percentage change.
+        </p>
+
+        <div class="stats" style="margin-top: 14px">
+          <div class="stat">
+            <div class="num">+30.63%</div>
+            <div class="cap">Organic sessions</div>
+          </div>
+          <div class="stat">
+            <div class="num">+11.94%</div>
+            <div class="cap">Engaged sessions</div>
+          </div>
+          <div class="stat">
+            <div class="num">+22.74%</div>
+            <div class="cap">Event count (all events)</div>
+          </div>
+          <div class="stat">
+            <div class="num">+200%</div>
+            <div class="cap">Key events</div>
+          </div>
+        </div>
+
+        <div class="proof" style="margin-top: 20px">
+          <img
+            src="https://i.imgur.com/PjkIStb.png"
+            alt="GA4 Traffic Acquisition — Organic growth proof"
+            loading="lazy"
+          />
+          <div class="caption">GA4 screenshot provided by Incito.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAKEAWAY -->
+    <section>
+      <div class="container">
+        <div class="card inner takeaway">
+          <h2 style="margin: 0 0 8px">Key Takeaway</h2>
+          <p>
+            Fast, sustainable SEO growth often comes from auditing and
+            upgrading what you already have. For Incito, focusing on 16
+            high‑leverage pages, surfacing trust, and improving speed created a
+            compounding lift in qualified organic traffic and lead actions—
+            without a risky rebuild.
+          </p>
+          <a class="cta" href="mailto:hello@outriderdigital.com"
+            >Ready to turn existing pages into pipeline? Contact us — We can
+            help</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © Outrider Digital — Incito SEO Case Study
+    </footer>
+  </body>
+</html>
